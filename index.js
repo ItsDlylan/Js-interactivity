@@ -8,10 +8,10 @@ let addMovie = function(event){
     let deleteBtn = document.createElement('button');
     deleteBtn.textContent = 'X';
     deleteBtn.addEventListener('click', deleteMovie)
-    movie.appendChild(deleteBtn)
     movieTitle.textContent = inputField.value;
     movieTitle.addEventListener('click', crossOffMovie);
     movie.appendChild(movieTitle);
+    movie.appendChild(deleteBtn)
     document.querySelector('ul').appendChild(movie);
     inputField.value = ''
 }
