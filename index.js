@@ -13,12 +13,16 @@ let addMovie = function(event){
     movie.appendChild(movieTitle);
     movie.appendChild(deleteBtn)
     document.querySelector('ul').appendChild(movie);
+    console.log(inputField.textContent);
     inputField.value = ''
+    console.log(inputField.textContent);
 }
 let deleteMovie = function(event){
-    console.log(`${event}`);
-    message.textContent = `${event.target.parentNode.textContent} deleted!`
+   
     event.target.parentNode.remove()
+    console.log(event);
+    message.textContent = `${event.target.parentNode.firstChild.textContent} deleted!`
+    console.log(`${event.target.parentNode.firstChild.textContent}`);
     revealMessage()
 }
 let crossOffMovie = function(event){
